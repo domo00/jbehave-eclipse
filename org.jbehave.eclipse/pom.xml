@@ -75,12 +75,13 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.5.1</version>
         <executions>
           <execution>
             <id>test-compile</id>
             <phase>test-compile</phase>
             <configuration>
+              <source>1.6</source>
+              <target>1.6</target>  
               <verbose>true</verbose>
             </configuration>
             <goals>

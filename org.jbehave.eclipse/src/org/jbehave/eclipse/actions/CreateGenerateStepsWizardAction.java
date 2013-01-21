@@ -5,11 +5,8 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.IObjectActionDelegate;
-import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchListener;
 import org.eclipse.ui.IWorkbenchPart;
-import org.eclipse.ui.internal.actions.ModifyWorkingSetDelegate.NewWorkingSetAction;
 import org.jbehave.eclipse.wizards.GenerateStepsWizard;
 
 public class CreateGenerateStepsWizardAction implements IObjectActionDelegate {

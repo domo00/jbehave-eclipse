@@ -17,8 +17,7 @@ public class NewStoryWizard extends Wizard implements INewWizard {
 
 	private NewStoryWizardPage page;
 	private IStructuredSelection selection;
-	private IWorkbench workbench;
-
+	
 	public NewStoryWizard() {
 		setWindowTitle(WizardsMessages.NewStoryWizardTitle);
 	}
@@ -59,6 +58,5 @@ public class NewStoryWizard extends Wizard implements INewWizard {
 
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.selection = selection;
-		this.workbench = workbench;
 	}
 }
