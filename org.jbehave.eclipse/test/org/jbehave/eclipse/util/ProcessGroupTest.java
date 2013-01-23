@@ -29,6 +29,7 @@ public class ProcessGroupTest {
         for(int i=0;i<NB;i++) {
             final int iRef = i;
             group.spawn(new Runnable () {
+                @Override
                 public void run() {
                     for(int i=0;i<NB_TASKS;i++) {
                         group.spawn(new Task(iRef+"-"+i, counter));
@@ -52,6 +53,7 @@ public class ProcessGroupTest {
             this.counter = counter;
         }
 
+        @Override
         public void run() {
             try {
                 Thread.sleep(random.nextInt(17));

@@ -20,6 +20,7 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
@@ -33,12 +34,13 @@ public class SelectStepsToGenerateWizardPage extends WizardPage {
 	private IStructuredSelection selection;
 
 	public SelectStepsToGenerateWizardPage(IStructuredSelection selection) {
-		super(WizardsMessages.NewStoryWizardPageTitle);
-		setTitle(WizardsMessages.NewStoryWizardPageTitle);
-		setDescription(WizardsMessages.NewStoryWizardPageDescription);
+		super(WizardsMessages.NewStoryWizardPage_0);
+		setTitle(WizardsMessages.NewStoryWizardPage_1);
+		setDescription(WizardsMessages.NewStoryWizardPage_2);
 		this.selection = selection;
 	}
 
+	@Override
 	public void createControl(Composite parent) {
 		// create the composite to hold the widgets
 		Composite topLevel = new Composite(parent, SWT.NONE);
@@ -91,7 +93,7 @@ public class SelectStepsToGenerateWizardPage extends WizardPage {
 	}
 
 	private String[] getMissngSteps() {
-		ArrayList<String> missingSteps = new ArrayList<String>();
+		ArrayList<String> missingSteps = new ArrayList();
 		if (this.selection.getFirstElement() instanceof IFile) {
 			IFile file = (IFile) this.selection.getFirstElement();
 			String content = "";
